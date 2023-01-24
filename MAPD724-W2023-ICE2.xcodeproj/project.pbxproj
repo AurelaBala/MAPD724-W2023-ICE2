@@ -101,6 +101,7 @@
 		3FBE294E297F53EF002A7CDD /* MAPD724-W2023-ICE2 */ = {
 			isa = PBXGroup;
 			children = (
+				3FBE2993297F550C002A7CDD /* Core */,
 				3FBE298E297F5505002A7CDD /* GameObjects */,
 				3FBE2966297F54B0002A7CDD /* Assets */,
 				3FBE294F297F53EF002A7CDD /* AppDelegate.swift */,
@@ -117,7 +118,6 @@
 		3FBE2966297F54B0002A7CDD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				3FBE2993297F550C002A7CDD /* Core */,
 				3FBE2967297F54B0002A7CDD /* images */,
 				3FBE2973297F54B0002A7CDD /* audio */,
 				3FBE297A297F54B0002A7CDD /* fonts */,

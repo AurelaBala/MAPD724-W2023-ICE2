@@ -16,6 +16,8 @@ class GameViewController: UIViewController
     {
         super.viewDidLoad()
         
+        //print(self.view.frame.size.width)
+        //print(self.view.frame.size.height)
     
         if let scene = GKScene(fileNamed: "GameScene") {
             
@@ -25,9 +27,9 @@ class GameViewController: UIViewController
         
                 sceneNode.scaleMode = .aspectFill
                 
-                if let view = self.view as! SKView? {
+                if let view = self.view as! SKView?
+                {
                     view.presentScene(sceneNode)
-                    
                     view.ignoresSiblingOrder = true
                     
                 }

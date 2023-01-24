@@ -27,7 +27,7 @@ override func sceneDidLoad()
         
         //add ocean2 to the game scene
         ocean2 = Ocean()
-        ocean2?.position.y = -773
+        ocean2?.position.y = -627
         addChild(ocean2!)
         
         //add plane to the Scene
@@ -40,16 +40,16 @@ override func sceneDidLoad()
     
     func touchDown(atPoint pos : CGPoint)
     {
-        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -640))
     }
     
     func touchMoved(toPoint pos : CGPoint) {
-        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -640))
         
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -640))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
