@@ -1,12 +1,12 @@
 import GameplayKit
 import SpriteKit
 
-class Ocean : GameObject
+class Island : GameObject
 {
     //initializer
     init()
     {
-        super.init(imageString: "ocean", initialScale: 2.0)
+        super.init(imageString: "island", initialScale: 2.0)
         Start()
     }
     
@@ -14,22 +14,24 @@ class Ocean : GameObject
         fatalError("init(coder:) has not been implemented")
     }
     
+    //lifecycle functions
     override func Start()
     {
-        Reset()
-        zPosition = Layer.ocean.rawValue
+        zPosition = Layer.island.rawValue
         verticalSpeed = 5.0
+        Reset()
     }
     
     override func Update()
     {
-        Move()
+       Move()
         CheckBounds()
     }
     
+    
     override func CheckBounds()
     {
-        if(position.y <= -2253)
+        if(position.y <= -876)
         {
             Reset()
         }
@@ -37,10 +39,16 @@ class Ocean : GameObject
     
     override func Reset()
     {
-        position.y = 2253
+        position.y = 876
+        //get a random number from -313 to 313
+        let randomX:Int = (randomSource?.nextInt(upperBound: 626))! - 313
+        position.x = CGFloat(randomX)
+        isColliding = false
     }
+    
     func Move()
     {
         position.y -= verticalSpeed!
     }
+    
 }
