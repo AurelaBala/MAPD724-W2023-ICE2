@@ -13,6 +13,7 @@ class GameScene: SKScene {
     var ocean2: Ocean?
     var plane: Plane?
     var island: Island?
+    var cloud: Cloud?
     
 override func sceneDidLoad()
     {
@@ -38,6 +39,12 @@ override func sceneDidLoad()
         //add island to the scene
         island = Island()
         addChild(island!)
+        
+        //add cloud to the scene
+        cloud = Cloud()
+        addChild(cloud!)
+        
+        
         
     }
     
@@ -80,5 +87,6 @@ override func sceneDidLoad()
         ocean2?.Update()
         plane?.Update()
         island?.Update()
+        cloud?.Update()
     }
 }
